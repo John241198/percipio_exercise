@@ -52,9 +52,20 @@ print("sum of first ten odd numbers", odd_sum)
 
 
 #c) Print all 3 Digit numbers and their previous 2 numbers in the sequence. For Eg: in the case 55+89=144, output should be  11th Fibonacci number is 144 (55 + 89)
-
+"""
 for i in m:
     if (i<1000 and i>99):
         print(str(m.index(i)+1)+"th Fibonacci number is "+str(i))
+
+"""
+
+
+for i in m:
+    if (i<1000 and i>99):
+        a=m.index(i)+1
+        b=m[a-2]
+        c=m[a-3]
+        #print(b,c)
+        print(str(a)+"th Fibonacci number is "+str(i)+"("+str(c)+"+"+str(b)+")")
 
 
