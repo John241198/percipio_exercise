@@ -35,3 +35,35 @@ print(file_dir1.stdout)
 
 p4=subprocess.run([python,r"C:\Users\ELCOT\HCL Python Training\john\count.py"],shell=True,capture_output=True,text=True)
 print(p4.stdout)
+
+
+
+
+"""
+Prepare a document mentioning in detail about subprocess module. 
+Only add information which you understand and have used in the programs
+"""
+
+"""
+subprocess module:
+    
+    i)shell parameter:
+        when shell=True it will display shell commands result/shell=False (default) at certain point the system
+        could not find the file specified or path is not found reason is the command used in the above program is 
+        "dir" which is build in the shell command so we have to pass shell argument in run process
+            example:
+                subprocess.run("dir",shell=True)
+                
+    ii)standard out(stdout):
+        when we complete the process it will display "completed process(arg["dir"],returncode=0)" 
+        example:
+            p1=subprocess.run("dir",shell=True)
+            print(p1.args) it output is "dir"
+            print(p1.returncode) its output is 0(sucessful)
+            print(p1.stdout) is output is None
+            
+            because we have to capture output using capture_output=True argument must pass in the subprocess program
+        now we print(p1.stdout) output will be in bytes to decode that we use stdout.decode() methods to display
+        exact command will shows in the console windows also we can pass text=True argument and instant of decode.
+        
+"""
