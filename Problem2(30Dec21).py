@@ -18,3 +18,12 @@ for i in new_ip.split():
     ip_list.append(i)
     print("IP Address is",i)
 print("\nTotal IP address noted is",len(ip_list))
+
+
+
+#using regex
+import re
+ip_search=re.findall("\d{2}.\d{2}.\d{3}.\d{1}",ip)
+for i in ip_search:
+    print("IP Address is",i)
+print("\nTotal IP address noted is",len(ip_search))
